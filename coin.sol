@@ -22,6 +22,7 @@ contract Coin {
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
         
+        //通知客户端，发送通知消息
         Sent(msg.sender, receiver, amount);
     }
 }
