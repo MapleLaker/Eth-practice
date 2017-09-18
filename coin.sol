@@ -1,6 +1,7 @@
 contract Coin {
 //关键字“public”使变量能从合约外部访问。
     address public minter;
+//It is map['address'] = 余额。 可以随意设定
     mapping (address => uint) public balances;
 
 //事件让轻客户端能高效的对变化做出反应。
