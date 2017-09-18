@@ -1,5 +1,6 @@
 
 contract owned {
+//记录了creator的账户
     address public owner;
 
     function owned() {
@@ -29,6 +30,7 @@ contract Coin is owned{
         owner = msg.sender;
     }
     
+    //直接替换代码
     function mint(address receiver, uint amount) onlyOwner{
         //if (msg.sender != owner) return;
         balances[receiver] += amount;
@@ -39,6 +41,7 @@ contract Coin is owned{
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
         
+        //事件通知
         Sent(msg.sender, receiver, amount);
     }
 }
