@@ -8,3 +8,6 @@ send()，各个账户，各自花各自的钱。
 2. inherit-coin
 说明：增加#身份权限管理#Module.需要该功能的module 只要集成该Module就可以。sol 以太坊编程模型中，主要使用#账户#， 去做权限的验证。
 在子类中，曾加#onlyOwner#关键字即可。
+
+3. MINIMUM VIABLE TOKEN
+说明：一个最基本,可以运行的Token
