@@ -13,10 +13,14 @@ contract Coin {
     function Coin() {
         minter = msg.sender;
     }
+    
+    //铸币
     function mint(address receiver, uint amount) {
         if (msg.sender != minter) return;
         balances[receiver] += amount;
     }
+    
+    //流通
     function send(address receiver, uint amount) {
         if (balances[msg.sender] < amount) return;
         balances[msg.sender] -= amount;
